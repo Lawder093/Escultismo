@@ -3,12 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Comunidad Crítica de Escultismo Popular</title>
+    <style>
+   
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+/* =====================
+   HERO BRAND
+===================== */
+
+.brand-container {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0d2235;
+  margin-bottom: 30px;
+  animation: slideDown 1s ease-out;
+}
+
+.main-logo {
+  max-width: 700px;
+  width: 95%;
+  animation: floatLogo 4s ease-in-out infinite;
+}
+
+.slogan {
+  margin-top: 30px;
+  font-size: 1.6rem;
+  font-style: italic;
+  animation: softPulse 3s ease-in-out infinite;
+}
+
+/* =====================
+   CENTROS
+===================== */
+
+.centers-section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.wave-title {
+  font-size: 2.5rem;
+  margin-bottom: 70px;
+}
+
+.centers-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.centers-grid img {
+  max-width: 200px;
+  animation: bounce 3.5s infinite;
+}
+
+/* =====================
+   ANIMACIONES
+===================== */
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatLogo {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+@keyframes softPulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); color:#b01e23; }
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 768px) {
+  .main-title { font-size: 2rem; }
+  .wave-title { font-size: 1.8rem; }
+}
+    </style>
 </head>
 <body>
    
    <div id="nav-placeholder"></div>
    
+<main>
+
+  <!-- HERO / BRAND -->
+  <section class="brand-container">
+    <h1 class="main-title">
+      Comunidad Crítica de Escultismo Popular, A. C.
+    </h1>
+
+    <img
+      src="https://escultista.org/wp-content/uploads/2025/02/cropped-PNG4.png"
+      class="main-logo"
+      alt="Logo Escultismo"
+    >
+
+    <p class="slogan">
+      Por la construcción de otros mundos posibles
+    </p>
+  </section>
+
+
+  <!-- CENTROS -->
+  <section class="centers-section">
+    <h2 class="wave-title">
+      Centros de Desarrollo Permanentes
+    </h2>
+
+    <div class="centers-grid">
+      <img src="https://escultista.org/wp-content/uploads/2023/11/meraki-color.png" alt="Centro Meraki">
+      <img src="https://escultista.org/wp-content/uploads/2025/05/GIP-208x300-1.png" alt="Grupo Primero">
+      <img src="https://escultista.org/wp-content/uploads/2023/10/CDS-e1677955566360-150x150-1.png" alt="Centro San Lucas">
+    </div>
+  </section>
+
+</main>
  
    
 
