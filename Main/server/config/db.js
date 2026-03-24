@@ -1,25 +1,14 @@
-
-
 const mongoose = require('mongoose');
-
-const Schema = mongoose.Schema;
-const PostSchema = new Schema({
-  title: {
-    type: String,
-    required: true
-  },
-  body: {
-    type: String,
-    required: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now
+const connectDB = async () => {
+  
+  try {
+    mongoose.set('strictQuery', false);
+    const conn = await mongoose.connect(process.env.MONGODB_URI);
+    console.log(`Database Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
   }
-});
 
-module.exports = mongoose.model('Post', PostSchema);
+}
+
+module.exports = connectDB;
